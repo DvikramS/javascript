@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+<head>My Web Page.</head>
+<body>
+</br>
+<div id="d">
+<button id="demo1" onclick="test()">Add​ ​Another​ ​Button</button>
+</div>
+
+<script type="text/javascript">
+function test(){
+	
+	/*  var btn = document.createElement("BUTTON");
+	  btn.innerHTML = "CLICK ME";
+	  document.body.appendChild(btn); */
+ 	var but=document.createElement("BUTTON");
+ 	but.setAttribute("id","demo");
+	but.innerHTML="Distroy Me";
+	but.setAttribute("type","button");
+	but.setAttribute("value","Distroy Me");
+	but.setAttribute("onclick","test1()"); 
+	var parent=document.getElementById("d");
+	parent.appendChild(but); 
+	
+	
+}
+
+function test1(){
+	var parent=document.getElementById("d");
+	var child=document.getElementById("demo");
+	parent.removeChild(child);
+}
+
+</script>
+</body>
+</html>

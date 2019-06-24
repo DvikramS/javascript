@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to enter number.</p>
+
+<button onclick="userInput()">Click</button>
+
+<p id="demo"></p>
+
+<script>
+function userInput() {
+
+var sum=0;
+while(true){
+	var num=prompt("Please enter number");
+	if(!(isNaN(num))){
+		sum=sum+Number(num);
+	}
+	
+	if(isNaN(num)||num==null){
+		break;
+	}
+	
+	
+}
+document.getElementById("demo").innerHTML="Sum is"+ sum;
+	 
+	}
+</script>
+
+</body>
+</html>
